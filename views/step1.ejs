@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Maker - Step 1: Choose Ingredients</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🥬 Recipe Maker</h1>
+            <div class="progress-bar">
+                <div class="progress-step active">Step 1</div>
+                <div class="progress-step">Step 2</div>
+                <div class="progress-step">Step 3</div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="step-header">
+                <h2>Step 1: Choose Your Ingredients</h2>
+                <p>Type the ingredients you have available. You can add multiple ingredients.</p>
+            </div>
+
+            <form id="ingredientForm" action="/step2" method="POST">
+                <div class="form-group">
+                    <label for="ingredientInput" class="form-label">Add Ingredients:</label>
+                    <div class="ingredient-input-container">
+                        <input type="text" 
+                               id="ingredientInput" 
+                               class="form-input" 
+                               placeholder="Type an ingredient (e.g., chicken, rice, tomatoes)..."
+                               autocomplete="off">
+                        <button type="button" id="addIngredientBtn" class="btn btn-secondary">Add</button>
+                    </div>
+                    <div id="suggestions" class="suggestions-dropdown"></div>
+                </div>
+
+                <div class="selected-ingredients">
+                    <h3>Selected Ingredients:</h3>
+                    <div id="ingredientsList" class="ingredients-tags">
+                        <p class="no-ingredients">No ingredients added yet. Start typing above!</p>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="nextBtn" disabled>
+                        Continue to Step 2
+                    </button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script src="/js/step1.js"></script>
+</body>
+</html> 

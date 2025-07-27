@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Maker - Step 2: Special Requests</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>✏️ Recipe Maker</h1>
+            <div class="progress-bar">
+                <div class="progress-step completed">Step 1</div>
+                <div class="progress-step active">Step 2</div>
+                <div class="progress-step">Step 3</div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="step-header">
+                <h2>Step 2: Special Requests & Preferences</h2>
+                <p>Tell us about any dietary preferences or special requests for your recipe.</p>
+            </div>
+
+            <div class="selected-ingredients">
+                <h3>Selected Ingredients:</h3>
+                <div class="ingredients-tags">
+                    <% selectedIngredients.forEach(ingredient => { %>
+                        <span class="ingredient-tag"><%= ingredient %></span>
+                    <% }); %>
+                </div>
+            </div>
+
+            <form id="requestsForm" action="/generate-recipe" method="POST">
+                <div class="form-group">
+                    <label for="specialRequests" class="form-label">
+                        Any dietary preferences or special requests?
+                    </label>
+                    <textarea 
+                        id="specialRequests" 
+                        name="specialRequests" 
+                        class="form-textarea"
+                        placeholder="Examples: Make it vegan, No oven needed, Spicy, Indian-style, Quick and easy, Gluten-free..."
+                        rows="4"
+                    ></textarea>
+                    <small class="form-help">
+                        Leave blank if you have no special requests. Examples: "Make it vegan", "No oven", "Spicy", "Indian-style", "Quick and easy", "Gluten-free"
+                    </small>
+                </div>
+
+                <div class="form-actions">
+                    <a href="/" class="btn btn-secondary">Back to Step 1</a>
+                    <button type="submit" class="btn btn-primary">
+                        Generate Recipe
+                    </button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script src="/js/step2.js"></script>
+</body>
+</html> 
+y

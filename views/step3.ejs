@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Maker - Your Generated Recipe</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>👨‍🍳 Recipe Maker</h1>
+            <div class="progress-bar">
+                <div class="progress-step completed">Step 1</div>
+                <div class="progress-step completed">Step 2</div>
+                <div class="progress-step active">Step 3</div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="step-header">
+                <h2>Your Personalized Recipe</h2>
+                <p>Here's your AI-generated recipe based on your ingredients and preferences!</p>
+            </div>
+
+            <div class="recipe-summary">
+                <div class="summary-item">
+                    <h4>Selected Ingredients:</h4>
+                    <div class="ingredients-tags">
+                        <% selectedIngredients.forEach(ingredient => { %>
+                            <span class="ingredient-tag"><%= ingredient %></span>
+                        <% }); %>
+                    </div>
+                </div>
+                
+                <% if (specialRequests && specialRequests.trim()) { %>
+                    <div class="summary-item">
+                        <h4>Special Requests:</h4>
+                        <p class="special-requests"><%= specialRequests %></p>
+                    </div>
+                <% } %>
+            </div>
+
+            <div class="recipe-content">
+                <div class="recipe-text">
+                    <%- recipe.replace(/\n/g, '<br>') %>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <a href="/restart" class="btn btn-primary">Create New Recipe</a>
+                <button onclick="window.print()" class="btn btn-secondary">Print Recipe</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="/js/step3.js"></script>
+</body>
+</html> 
