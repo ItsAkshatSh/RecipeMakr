@@ -1,4 +1,4 @@
-#RecipeMakr
+# RecipeMakr
 
 A 3-step web application that helps users generate personalized recipes using the Hack Club AI API. Users can select ingredients, specify preferences, and receive AI-generated recipes.
 
