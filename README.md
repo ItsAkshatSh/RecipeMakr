@@ -32,7 +32,7 @@ Check it out [here](https://recipemakr.vercel.app/)
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ItsAkshatSh/RecipeMakr.git
    cd recipe-maker
    ```
 
