@@ -10,14 +10,23 @@ document.addEventListener('DOMContentLoaded', function() {
     let suggestionIndex = -1;
 
     const commonIngredients = [
-        'chicken', 'beef', 'pork', 'salmon', 'shrimp', 'tofu', 'eggs',
-        'rice', 'pasta', 'quinoa', 'bread', 'potatoes', 'sweet potatoes',
-        'tomatoes', 'onions', 'garlic', 'bell peppers', 'carrots', 'broccoli',
-        'spinach', 'kale', 'mushrooms', 'zucchini', 'eggplant', 'corn',
-        'cheese', 'milk', 'yogurt', 'butter', 'olive oil', 'coconut oil',
-        'soy sauce', 'lemon', 'lime', 'ginger', 'basil', 'oregano', 'thyme',
-        'salt', 'pepper', 'sugar', 'flour', 'honey', 'maple syrup'
-    ];
+    'chicken', 'beef', 'pork', 'salmon', 'shrimp', 'tofu', 'eggs',
+    'rice', 'pasta', 'quinoa', 'bread', 'potatoes', 'sweet potatoes',
+    'tomatoes', 'onions', 'garlic', 'bell peppers', 'carrots', 'broccoli',
+    'spinach', 'kale', 'mushrooms', 'zucchini', 'eggplant', 'corn',
+    'cheese', 'milk', 'yogurt', 'butter', 'olive oil', 'coconut oil',
+    'soy sauce', 'lemon', 'lime', 'ginger', 'basil', 'oregano', 'thyme',
+    'salt', 'pepper', 'sugar', 'flour', 'honey', 'maple syrup','cabbage', 
+    'lettuce', 'peas', 'green beans', 'chickpeas', 'lentils', 'cucumber',
+    'apple', 'banana', 'orange', 'grapes', 'blueberries', 'strawberries', 'avocado',
+    'couscous', 'barley', 'oats', 'tortillas', 'noodles','turkey', 'lamb', 'duck',
+    'bacon', 'ham', 'tempeh', 'seitan','ketchup', 'mustard', 'mayonnaise', 'vinegar',
+    'hot sauce', 'sriracha', 'bbq sauce','peanut butter', 'tahini', 'miso paste',
+    'cumin', 'paprika', 'chili powder', 'coriander', 'cinnamon', 'nutmeg', 'cloves',
+    'turmeric', 'curry powder', 'rosemary', 'parsley', 'dill',
+    'baking powder', 'baking soda', 'cornstarch', 'vanilla extract', 'yeast', 
+    'breadcrumbs', 'cocoa powder', 'chocolate chips', 'nuts', 'raisins'
+];
 
     function addIngredient(ingredient) {
         const trimmedIngredient = ingredient.trim().toLowerCase();
